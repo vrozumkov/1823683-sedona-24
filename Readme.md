@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Владислав Розумков](https://up.htmlacademy.ru/adaptive/24/user/1823683).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец] (https://htmlacademy.ru/profile/seraphim).
 
 ---
 

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -16,16 +17,16 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item site-list__item--current">
-              <a href="#">Фото и Видео</a>
+              <a class="site-list__link" href="#">Фото и Видео</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="site-list__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="#">HTML ACADEMY</a>
+              <a class="site-list__link" href="#">HTML ACADEMY</a>
             </li>
           </ul>
         </div>
@@ -34,12 +35,14 @@
     <main class="catalog-main">
       <section class="catalog-welcome">
         <div class="catalog-welcome__wrapper">
-          <h1 class="visually-hidden">Фото и видео о Седоне</h1>
-          <img src="../source/img/sedona.svg" alt="Sedona" class="catalog-welcome__image" width="229" height="39">
-        </div>
-        <div class="catalog-welcome__text">
-          <h2 class="catalog-welcome__title">Фото и видео</h2>
-          <p class="catalog-welcome__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
+          <div class="catalog-welcome__container">
+            <h1 class="visually-hidden">Фото и видео о Седоне</h1>
+            <img src="../source/img/sedona.svg" alt="Sedona" class="catalog-welcome__image" width="229" height="39">
+          </div>
+          <div class="catalog-welcome__text">
+            <h2 class="catalog-welcome__title">Фото и видео</h2>
+            <p class="catalog-welcome__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
+          </div>
         </div>
       </section>
       <section class="gallery">
@@ -80,7 +83,15 @@
           <div class="review__video video">
             <img src="../source/img/video-mobile.jpg" alt="">
             <div class="video__control">
-              <input class="video__scale" type="range" name="video-scale">
+              <div class="range">
+                <div class="range__scale">
+                  <div class="range__bar">
+                    <button class="range__toggle">
+                      <span class="visually-hidden">Изменить время</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
               <button class="video__replay" type="button">
                 <span class="visually-hidden">Повтор</span>
                 <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4V0L3 5L8 10V6C11.3 6 14 8.7 14 12C14 15.3 11.3 18 8 18C4.7 18 2 15.3 2 12H0C0 16.4 3.6 20 8 20C12.4 20 16 16.4 16 12C16 7.6 12.4 4 8 4Z" fill="#5C6870"/></svg>
@@ -119,7 +130,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="https://www.youtube.com/user/htmlacademyru" class="social__link">
+              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
                 <svg width="20" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8v8.3C0 12.7 1.3 14 2.8 14h14.3c1.6 0 2.8-1.3 2.8-2.8V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7 7 10.4Z" fill="#fff"/></svg>
                 <span class="visually-hidden">Youtube</span>
               </a>

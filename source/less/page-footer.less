@@ -1,3 +1,18 @@
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
 
 .page-footer__slogan {
   font-weight: bold;
@@ -7,12 +22,20 @@
 }
 
 .social__list {
+  display: flex;
+  justify-content: space-between;
+  width: 151px;
   list-style: none;
   padding: 0;
+  margin: auto;
 }
 
 .social__item {
   background-color: #81b3d2;
+}
+
+.page-footer__copyright {
+  text-align: center;
 }
 
 .copyright__text {

@@ -1,17 +1,52 @@
 .feedback__wrapper {
   padding: 0 0 48px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .form__name {
   border: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }
 
 .form__contact {
   border: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+    grid-column: 1 / -1;
+  }
 }
 
 .form__impression {
   border: none;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+  }
 }
 
 .form__impression-list {
@@ -21,15 +56,62 @@
 
 .form__visited {
   border: none;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .form__visited-list {
   list-style: none;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .form__emotions {
   border: none;
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    grid-column: 1 / -1;
+  }
+}
+
+.emotions__input {
+  width: 279px;
+  height: 160px;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    height: 118px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
+}
+
+.form__label {
+  display: flex;
+}
+
+.form__contact-label {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__title {
@@ -63,4 +145,19 @@
 .form__input::placeholder {
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
+}
+
+.submit__button {
+  @media (min-width: @tablet-width) {
+    order: 6;
+  }
+}
+
+.form__clue {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    order: 7;
+    display: block;
+  }
 }

@@ -2,29 +2,145 @@
   display: flex;
   flex-direction: column;
   margin: 0;
+  position: relative;
 }
 
 .page-header__logo {
+  width: 102px;
   height: 84px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-nav {
+  position: relative;
+  width: auto;
+  min-height: 55px;
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 22px;
+  z-index: 2;
+  width: 23px;
+  height: 23px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  background-color: #81b3d2;
+  box-shadow: 0 7px 0 0 #81b3d2, 0 14px 0 0 #81b3d2;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: fade(#81b3d2, 60%);
+  box-shadow: 0 7px 0 0 fade(#81b3d2, 60%), 0 14px 0 0 fade(#81b3d2, 60%);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#81b3d2, 30%);
+  box-shadow: 0 7px 0 0 fade(#81b3d2, 30%), 0 14px 0 0 fade(#81b3d2, 30%);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .main-nav--opened .main-nav__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 7px;
+    height: 100%;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 17px;
+  right: 22px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -2px;
+    width: 23px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade(#ffffff, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#ffffff, 30%);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .user-list__item {
+  display: block;
+  background-color: #81b3d2;
+}
+
 .main-nav__list {
+  margin: 0;
+
   @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    width: 723px;
-    margin: 16px 11px 14px 34px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 768px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1069px;
-    margin: 16px 55px 14px 76px;
+    max-width: 1200px;
   }
 }
 
@@ -35,15 +151,35 @@
 .site-list__item {
   background-color: #81b3d2;
   list-style: none;
-  padding: 10px 0 5px;
   text-align: center;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  &:nth-child(3) {
+    grid-column: 4 / 5;
+  }
+
+  &:hover {
+    @media (max-width: @mobile-width-only) {
+      background-color: #669ec0;
+    }
+  }
+
+  &:active {
+    @media (max-width: @mobile-width-only) {
+      background-color: #5496bd;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    background-color: #ffffff;
+    background-color: transparent;
+    border: none;
   }
 }
 
 .site-list__link {
+  display: block;
+  padding: 16px 4px 14px;
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
@@ -51,10 +187,32 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  &:active {
+    @media (max-width: @mobile-width-only) {
+      color: fade(#ffffff, 30%);
+    }
+
+    @media (min-width: @tablet-width) {
+      color: fade(#000000, 30%);
+    }
+  }
+
+  &:hover {
+    @media (min-width: @tablet-width) {
+      color: #81b3d2;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     color: #000000;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
+  }
+}
+
+.site-list__link--current {
+  @media (min-width: @tablet-width) {
+    color: #766357;
   }
 }

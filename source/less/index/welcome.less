@@ -3,8 +3,6 @@
 }
 
 .welcome__wrapper {
-  padding: 32px 0 11px;
-
   @media (min-width: @tablet-width) {
     width: @tablet-width;
   }
@@ -14,14 +12,50 @@
   }
 }
 
+.welcome__container {
+  background-color: #81b3d2;
+  background-image: url("/img/intro-triangle.svg"), url("/img/back-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom, center top;
+  padding: 90px 18px 75px;
+
+  @media (max-width: @mobile-width-only) {
+    background-size: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 154px 91px;
+    background-size: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 78px 380px 91px;
+  }
+}
+
+.welcome__text {
+  padding: 32px 20px 27px;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 113px 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 329px 41px;
+  }
+}
+
 .welcome__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0 0 31px;
 }
 
 .welcome__subtitle {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+  margin: 0;
 }

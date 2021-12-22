@@ -1,0 +1,48 @@
+.form__name {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 0 0 #e5e5e5;
+  padding: 17px 20px 14px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    padding: 0 60px 0 58px;
+    box-shadow: none;
+
+    & .form__title {
+      margin-right: auto;
+      margin-bottom: 55px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px 0 79px;
+  }
+}
+
+.input__name {
+  width: 210px;
+
+  @media (min-width: @tablet-width) {
+    width: 196px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 330px;
+  }
+}
+
+.input__surname,
+.input__patronymic {
+  width: 172px;
+
+  @media (min-width: @tablet-width) {
+    width: 158px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 292px;
+  }
+}

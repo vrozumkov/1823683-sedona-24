@@ -1,0 +1,115 @@
+.form__contact {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 0 0 #e5e5e5;
+  padding: 17px 20px 14px;
+  margin: 20px 0 0;
+
+  & .form__description--desktop {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+    grid-column: 1 / -1;
+    padding: 0 60px;
+    margin-bottom: 52px;
+    box-shadow: none;
+
+    & .form__description {
+      margin-bottom: 8px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 122px;
+      height: 1px;
+      background-color: #dbdbdb;
+      bottom: -3px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 122px;
+      height: 1px;
+      background-color: #dbdbdb;
+      bottom: -3px;
+      right: 60px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 120px;
+
+    &::before {
+      width: 280px;
+      bottom: -60px;
+    }
+
+    &::after {
+      width: 280px;
+      bottom: -60px;
+      right: 120px;
+    }
+
+    & .form__description--mobile {
+      display: none;
+    }
+
+    & .form__description--desktop {
+      display: inline-block;
+    }
+  }
+}
+
+.form__contact-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 14px;
+
+  & .form__logo-phone {
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    right: 0;
+    background-color: #e6e6e6;
+  }
+
+  & .form__logo-email {
+    position: absolute;
+    padding: 23px 21px;
+    bottom: 0;
+    right: 0;
+    background-color: #e6e6e6;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.input__phone,
+.input__email {
+  width: 260px;
+
+  @media (min-width: @tablet-width) {
+    width: 625px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 290px;
+    margin-left: 17px;
+  }
+}

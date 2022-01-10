@@ -16,21 +16,30 @@
   background-color: #81b3d2;
   background-image: url("/img/intro-triangle.svg"), url("/img/back-mobile.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center bottom, center top;
+  background-position: center bottom, center bottom;
   padding: 90px 18px 75px;
 
   @media (max-width: @mobile-width-only) {
-    background-size: auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/intro-triangle.svg"), url("/img/back-mobile2x.png");
+      background-size: auto auto, 320px auto;
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding: 77px 154px 91px;
+    background-image: url("/img/intro-triangle.svg"), url("/img/back-desktop.jpg");
     background-size: auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/intro-triangle.svg"), url("/img/back-desktop2x.jpg");
+      background-size: auto auto, 768px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 78px 380px 91px;
+    background-size: auto, cover;
   }
 }
 

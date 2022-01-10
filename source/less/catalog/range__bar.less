@@ -1,0 +1,38 @@
+.range__scale {
+  height: 45px;
+  background-color: fade(#000000, 60%);
+
+  @media (min-width: @tablet-width) {
+    height: 93px;
+  }
+}
+
+.range__bar {
+  position: absolute;
+  top: 20px;
+  height: 3px;
+  background-color: fade(#ffffff, 20%);
+  width: 253px;
+  left: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 389px;
+    left: 93px;
+    top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 540px;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  top: -5px;
+  left: 56px;
+  width: 13px;
+  height: 13px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}

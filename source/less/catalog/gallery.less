@@ -68,8 +68,8 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     bottom: 0;
-    color: #ffffff;
-    background: fade(#000000, 30%);
+    color: @white;
+    background: fade(@black, 30%);
   }
 }
 
@@ -93,7 +93,7 @@
   color: #333333;
 
   @media (min-width: @desktop-width) {
-    color: #ffffff;
+    color: @white;
   }
 }
 
@@ -112,6 +112,10 @@
     margin-right: 20px;
     padding-top: 30px;
     background-position: left 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("/img/like-icon-light.svg");
   }
 }
 

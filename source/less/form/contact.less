@@ -1,4 +1,4 @@
-.form__contact {
+.contact__wrapper {
   border: none;
   display: flex;
   flex-direction: column;
@@ -48,13 +48,13 @@
 
     &::before {
       width: 280px;
-      bottom: -60px;
+      bottom: 15px;
     }
 
     &::after {
       width: 280px;
-      bottom: -60px;
-      right: 120px;
+      bottom: 15px;
+      right: 265px;
     }
 
     & .form__description--mobile {
@@ -67,49 +67,3 @@
   }
 }
 
-.form__contact-label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  margin-bottom: 14px;
-
-  & .form__logo-phone {
-    position: absolute;
-    padding: 20px;
-    bottom: 0;
-    right: 0;
-    background-color: #e6e6e6;
-  }
-
-  & .form__logo-email {
-    position: absolute;
-    padding: 23px 21px;
-    bottom: 0;
-    right: 0;
-    background-color: #e6e6e6;
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-top: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-.input__phone,
-.input__email {
-  width: 260px;
-
-  @media (min-width: @tablet-width) {
-    width: 625px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 290px;
-    margin-left: 17px;
-  }
-}

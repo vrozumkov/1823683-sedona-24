@@ -3,17 +3,23 @@
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
+  margin-right: 12px;
 }
 
-.copyright__link svg {
+.copyright__link {
+  display: block;
   width: 27px;
   height: 35px;
 
-  &:hover {
-    fill: #81b3d2;
+  &:hover .copyright__logo {
+    fill: @light-blue;
   }
 
-  &:active {
-    fill: fade(#000000, 30%);
+  &:active .copyright__logo {
+    fill: rgba(@black, 0.3);
   }
+}
+
+.copyright__logo {
+  fill: @black;
 }

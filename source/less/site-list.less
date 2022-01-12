@@ -3,7 +3,7 @@
 }
 
 .site-list__item {
-  background-color: #81b3d2;
+  background-color: @light-blue;
   list-style: none;
   text-align: center;
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
@@ -37,28 +37,28 @@
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
-  color: #ffffff;
+  color: @white;
   text-transform: uppercase;
   text-decoration: none;
 
   &:active {
     @media (max-width: @mobile-width-only) {
-      color: fade(#ffffff, 30%);
+      color: fade(@white, 30%);
     }
 
     @media (min-width: @tablet-width) {
-      color: fade(#000000, 30%);
+      color: fade(@black, 30%);
     }
   }
 
   &:hover {
     @media (min-width: @tablet-width) {
-      color: #81b3d2;
+      color: @light-blue;
     }
   }
 
   @media (min-width: @tablet-width) {
-    color: #000000;
+    color: @black;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;

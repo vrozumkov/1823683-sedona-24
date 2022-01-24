@@ -1,9 +1,10 @@
-.catalog-welcome {
+.welcome {
   text-transform: uppercase;
-  text-align: center;
 }
 
-.catalog-welcome__wrapper {
+.welcome__wrapper {
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     width: @tablet-width;
   }
@@ -13,11 +14,11 @@
   }
 }
 
-.catalog-welcome__container {
+.welcome__container {
   background-color: @light-blue;
   background-image: url("/img/intro-triangle.svg"), url("/img/back-mobile.png");
   background-repeat: no-repeat;
-  background-position: center bottom, center bottom;
+  background-position: center bottom, center top;
   padding: 90px 18px 75px;
 
   @media (max-width: @mobile-width-only) {
@@ -44,32 +45,28 @@
   }
 }
 
-.catalog-welcome__text {
-  padding: 32px 10px 20px;
+.welcome__text {
+  padding: 32px 20px 27px;
 
   @media (min-width: @tablet-width) {
-    padding: 65px 145px;
+    padding: 44px 113px 53px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 102px;
+    padding: 55px 329px 41px;
   }
 }
 
-.catalog-welcome__title {
-  font-weight: bold;
+.welcome__title {
   font-size: 18px;
   line-height: 26px;
-  margin: 0 0 20px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 30px;
-  }
+  font-weight: 700;
+  margin: 0 0 31px;
 }
 
-.catalog-welcome__subtitle {
-  font-weight: normal;
+.welcome__subtitle {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 26px;
+  font-weight: 400;
   margin: 0;
 }

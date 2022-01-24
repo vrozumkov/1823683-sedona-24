@@ -8,7 +8,7 @@
   position: absolute;
   top: 17px;
   right: 22px;
-  z-index: 2;
+  z-index: 12;
   width: 23px;
   height: 23px;
   padding: 0;
@@ -74,7 +74,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
+    top: 16px;
     left: -2px;
     width: 23px;
     height: 4px;
@@ -116,7 +116,7 @@
 }
 
 .main-nav__list {
-  margin: 0;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -126,6 +126,5 @@
 
   @media (min-width: @desktop-width) {
     max-width: 1200px;
-    margin: 0 auto;
   }
 }

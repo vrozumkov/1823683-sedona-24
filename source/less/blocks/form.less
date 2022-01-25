@@ -519,28 +519,21 @@
 }
 
 .form__textarea {
-  font-weight: bold;
+  padding: 14px 20px 14px;
+  width: 100%;
+  height: 160px;
+  box-sizing: border-box;
+  border: none;
+  resize: none;
+  background-color: #f2f2f2;
   font-size: 18px;
   line-height: 26px;
-  background-color: #f2f2f2;
-  border: none;
-  width: 280px;
-  height: 116px;
-  margin: 0;
-  padding: 0;
+  font-weight: 700;
+  color: @black;
+  font-family: inherit;
 
   &::placeholder {
-    font-family: "PT Sans", "Arial", sans-serif;
     color: @black;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 648px;
-    height: 160px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 960px;
   }
 }
 

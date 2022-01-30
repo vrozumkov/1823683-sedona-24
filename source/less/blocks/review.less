@@ -3,25 +3,28 @@
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
+    padding: 0 0 48px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
+    padding: 0 0 92px;
   }
 }
 
 .review__description {
-  padding: 0 20px;
+  padding: 0 24px;
 
   @media (min-width: @tablet-width) {
-    padding: 59px 130px 68px;
+    padding: 59px 162px 47px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 63px 350px 66px;
+    padding: 61px 375px 45px;
   }
 }
 
@@ -29,13 +32,25 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .review__subtitle {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  margin: 20px 0 33px;
+  margin: 28px 0 33px;
+
+  @media (min-width: @tablet-width) {
+    margin: 26px 0 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 28px 0 33px;
+  }
 }
 
 .review__video {

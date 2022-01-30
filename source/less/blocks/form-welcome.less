@@ -2,6 +2,7 @@
   padding: 0;
   text-align: center;
   text-transform: uppercase;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
@@ -13,12 +14,19 @@
   }
 }
 
+.form-welcome__image {
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 78px;
+  }
+}
+
 .form-welcome__container {
   background-color: #81b3d2;
   background-image: url("/img/intro-triangle.svg"), url("/img/back-mobile.png");
   background-repeat: no-repeat;
   background-position: center bottom, center bottom;
-  padding: 90px 18px 75px;
+  padding: 53px 18px 67px;
 
   @media (max-width: @mobile-width-only) {
     @media (min-resolution: 2dppx) {
@@ -28,7 +36,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 77px 154px 91px;
+    padding: 95px 154px 117px;
     background-image: url("/img/intro-triangle.svg"), url("/img/back-desktop.jpg");
     background-size: auto;
 
@@ -39,7 +47,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 78px 380px 91px;
+    padding: 101px 370px 123px;
     background-size: auto, cover;
   }
 }
@@ -48,11 +56,11 @@
   padding: 0 10px;
 
   @media (min-width: @tablet-width) {
-    padding: 34px 165px 46px;
+    padding: 26px 165px 50px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 80px 380px 36px;
+    padding: 75px 380px 20px;
   }
 }
 
@@ -61,11 +69,11 @@
   font-size: 18px;
   line-height: 26px;
   margin-top: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 }
 
@@ -73,6 +81,5 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  margin: 0 0 15px;
-  letter-spacing: -1px;
+  margin: 0 0 17px;
 }

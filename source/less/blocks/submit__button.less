@@ -8,6 +8,15 @@
   max-width: 280px;
   border: none;
   background-color: @light-blue;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    max-width: 325px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 480px;
+  }
 
   &:hover {
     background-color: #669ec0;

@@ -64,36 +64,41 @@ const createWebp = () => {
 }
 
 // SVG
-const svg = () =>  // Почему это работает так
-  gulp.src('source/img/*.svg')
+
+const svg = () =>
+  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
-    const sprite = () => {
-      return gulp.src('source/img/icons/*.svg')
-        .pipe(svgo())
-        .pipe(svgstore({
-          inlineSvg: true
-        }))
-        .pipe(rename('sprite.svg'))
-        .pipe(gulp.dest('build/img'))
-    }
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
 
     // Copy
-    const copy = (done) => {
-      gulp.src([
-        'source/fonts/*.{woff,woff2}',
-        'source/img/favicons/*.{png,svg}',
-      ], {
-        base: 'source'
-      })
-        .pipe(gulp.dest('build'))
-      done()
-    }
 
-    // Clean
-    const clean = () => {
-      return del('build')
-    }
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest',
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
+}
+
+// Clean
+
+const clean = () => {
+  return del('build')
+}
 
 // Server
 

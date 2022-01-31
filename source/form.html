@@ -15,7 +15,7 @@
         <picture>
           <source media="(min-width: 1200px)" srcset="./img/logotype-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/logotype-tablet.svg">
-          <img class="main-header__logo-picture" width="102" height="83" src="./img/logotype-mobile.svg" alt="Седона.">
+          <img class="page-header__logo-picture" width="102" height="83" src="./img/logotype-mobile.svg" alt="Седона.">
         </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -57,7 +57,6 @@
         <h2 class="visually-hidden">Форма отзыва</h2>
         <div class="feedback__wrapper">
           <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="get">
-
             <fieldset class="form__fieldset form__fieldset--name">
               <legend class="form__title">Представьтесь:</legend>
               <label class="form__label">
@@ -73,7 +72,6 @@
                 <input class="form__input form__input--patronymic" type="text" name="middlename" placeholder="Александрович">
               </label>
             </fieldset>
-
             <fieldset class="form__fieldset form__fieldset--contact">
               <legend class="form__title">Контактная информация:</legend>
               <label class="form__contact-label">
@@ -92,7 +90,6 @@
                 </svg>
               </label>
             </fieldset>
-
             <fieldset class="form__fieldset form__fieldset--impression">
               <legend class="form__title">Ваше общее впечатление:</legend>
               <ul class="form__impression-list">
@@ -119,7 +116,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="form__fieldset form__fieldset--visited">
               <legend class="form__title">Посещенные <br> достопримечательности:</legend>
               <ul class="form__visited-list">
@@ -153,12 +149,10 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="form__fieldset form__fieldset--emotions">
               <legend class="form__title">Опишите свои эмоции:</legend>
-              <textarea class="form__textarea" name="emotions" placeholder="Опишите подробно все свои восторги">
+              <textarea class="form__textarea" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
-
             <button class="submit__button" type="submit">Отправить отзыв</button>
             <div class="form__clue">* — обязательные поля</div>
           </form>
@@ -210,13 +204,13 @@
           </div>
         </div>
       </div>
-      </footer>
-      <div class="modal-form modal-form__fail--closed">
+    </footer>
+      <div class="modal-form modal-form__fail--show">
         <h2 class="modal-form__title">Что-то пошло не так!</h2>
         <p class="modal-form__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal-form__button" type="button">Ок</button>
       </div>
-      <div class="modal-form modal-form__success--closed">
+      <div class="modal-form modal-form__success--show">
         <div class="modal-form__wrapper">
           <h2 class="modal-form__title modal-form__success-title">Ваш отзыв отправлен!</h2>
           <p class="modal-form__description modal-form__success-description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
@@ -225,7 +219,6 @@
           <button class="modal-form__success-button" type="button">Закрыть окно</button>
         </div>
       </div>
-    </div>
     <script src="./js/menu.js"></script>
   </body>
 </html>

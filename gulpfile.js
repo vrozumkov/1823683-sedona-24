@@ -12,7 +12,7 @@
   import svgo from 'gulp-svgmin';
   import svgstore from 'gulp-svgstore';
   import del from 'del';
-  import browser from 'browser-sync';
+  import browser, { watch } from 'browser-sync';
 
   // Styles
 
@@ -67,7 +67,7 @@
   // SVG
 
   const svg = () =>
-    gulp.src(['source/img/*.svg', '!source/img/*.svg'])
+    gulp.src(['source/img/**/*.svg', '!source/img/*.svg'])
       .pipe(svgo())
       .pipe(gulp.dest('build/img'));
 

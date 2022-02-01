@@ -1,0 +1,122 @@
+.modal-form {
+  padding: 40px 42px 35px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 10;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 42px 50px;
+    width: 400px;
+  }
+}
+
+.modal-form__success {
+  padding: 40px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 0 0;
+    width: 640px;
+  }
+}
+
+.modal-form__wrapper {
+  padding: 0 40px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 110px;
+  }
+}
+
+.modal-form__title {
+  margin: 0 0 28px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal-form__description {
+  margin: 0 0 22px;
+  font-size: 14px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 53px;
+  }
+}
+
+.modal-form_wrapper-button {
+  padding: 20px;
+  background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 90px;
+  }
+}
+
+.modal-form__button {
+  min-width: 272px;
+  font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.modal-form__success-button {
+  width: 100%;
+  font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.modal-form__fail--show,
+.modal-form__success--show {
+  display: none;
+}
+
+.modal-form__button,
+.modal-form__success-button {
+  margin: 0;
+  padding: 15px 47px;
+  display: inline-block;
+  border: none;
+  box-sizing: border-box;
+  color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: #e5e5e5;
+  }
+}

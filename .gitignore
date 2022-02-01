@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 .vscode
+.bild
 *.ai
 *.log
 *.pdf
@@ -8,5 +9,7 @@
 *.sublime*
 node_modules/
 npm-debug.*
+source/css/*.css
+source/css/*.map
 Thumbs.db
 build

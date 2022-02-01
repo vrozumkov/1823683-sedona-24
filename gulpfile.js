@@ -38,7 +38,7 @@
 
   // Scripts
   const scripts = () => {
-    return gulp.src('source/js/*.js')
+    return gulp.src('source/js/menu.js')
       .pipe(terser())
       .pipe(gulp.dest('build/js'))
   }
@@ -72,7 +72,7 @@
       .pipe(gulp.dest('build/img'));
 
   const sprite = () => {
-    return gulp.src('source/img/icons/*.svg')
+    return gulp.src('source/img/*.svg')
       .pipe(svgo())
       .pipe(svgstore({
         inlineSvg: true
@@ -125,7 +125,7 @@
 
   const watcher = () => {
     gulp.watch('source/less/**/*.less', gulp.series(styles));
-    gulp.watch('source/js/*.js', gulp.series(scripts));
+    gulp.watch('source/js/menu.js', gulp.series(scripts));
     gulp.watch('source/*.html', gulp.series(html, reload))
   }
 

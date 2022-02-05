@@ -46,13 +46,24 @@
 
 .video__toggle {
   position: absolute;
-  top: -4px;
-  left: 111px;
-  width: 10px;
-  height: 11px;
-  border: none;
+  top: -1px;
+  left: 36px;
+  width: 8px;
+  height: 8px;
+  border: 0;
   border-radius: 100%;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -4px;
+    left: 111px;
+    width: 10px;
+    height: 11px;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+  }
 }
 
 .video__button-wrapper {
@@ -102,21 +113,25 @@
 .video__button--replay {
   padding: 22px 25px;
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 22px 35px;
+  }
 }
 
 .video__button--subtitles {
-  margin-right: 31px;
+  margin-right: 19px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 445px;
+    margin-left: 432px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 600px;
+    margin-left: 582px;
   }
 }
 
 .video__button--fullscreen {
   border: none;
-  margin-right: 23px;
+  margin-right: 17px;
 }

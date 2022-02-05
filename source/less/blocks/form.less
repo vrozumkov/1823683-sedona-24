@@ -587,8 +587,8 @@
 }
 
 .form__textarea {
-  padding: 14px 40px 14px;
-  width: 100%;
+  padding: 14px 20px 14px;
+  width: 280px;
   min-height: 160px;
   box-sizing: border-box;
   border: none;
@@ -602,6 +602,15 @@
 
   &::placeholder {
     color: @black;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    padding: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
   }
 }
 

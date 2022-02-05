@@ -8,18 +8,19 @@
   flex-direction: column;
   padding: 30px 78px 23px;
   background-color: @white;
+  margin: 0 auto;
+  width: @mobile-width;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: @tablet-width;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 29px 60px 29px;
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
+    width: @desktop-width;
     padding: 29px 120px 29px;
   }
 }

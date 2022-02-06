@@ -5,20 +5,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 320px;
   z-index: 10;
   background-color: #ffffff;
   text-align: center;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
   @media (min-width: @tablet-width) {
-    padding: 50px 42px 50px;
+    padding: 62px 42px 49px;
     width: 400px;
   }
 }
 
 .modal-success {
-  padding: 40px 0 0;
+  padding: 49px 0 0;
+  height: 325px;
 
   @media (min-width: @tablet-width) {
     padding: 40px 0 0;
@@ -27,7 +28,7 @@
 }
 
 .modal-form__title {
-  margin: 0 0 28px;
+  margin: 0 0 25px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -45,7 +46,15 @@
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 53px;
+    margin: 0 0 40px;
+  }
+}
+
+.modal-form__wrapper {
+  padding: 0 50px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 75px;
   }
 }
 
@@ -58,11 +67,16 @@
   }
 }
 
+.modal-form__success-description {
+  margin: 0 0 40px;
+}
+
 .modal-fail__button {
-  min-width: 272px;
+  width: 180px;
   font-size: 18px;
 
   @media (min-width: @tablet-width) {
+    width: 272px;
     font-size: 21px;
   }
 }
@@ -76,15 +90,14 @@
   }
 }
 
-.modal-fail--show,
-.modal-success--show {
+.modal-success--show,
+.modal-fail--show {
   display: none;
 }
 
-.modal-fail__button,
-.modal-success__button {
+.modal__button {
   margin: 0;
-  padding: 15px 47px;
+  padding: 17px 47px;
   display: inline-block;
   border: none;
   box-sizing: border-box;
@@ -92,7 +105,6 @@
   text-transform: uppercase;
   text-decoration: none;
   font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   cursor: pointer;
@@ -110,5 +122,14 @@
   &:disabled,
   &[disabled] {
     background-color: #e5e5e5;
+  }
+
+  & .modal-success__button {
+    width: 100%;
+    font-size: 18px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+    }
   }
 }

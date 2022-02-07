@@ -15,6 +15,16 @@
   }
 }
 
+.page-header--nojs .page-header__logo {
+  @media (min-width: @mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
 .page-header__logo {
   width: 102px;
   height: 84px;

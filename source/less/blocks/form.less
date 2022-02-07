@@ -2,13 +2,14 @@
   border: none;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   box-shadow: 0 1px 0 0 #e5e5e5;
   padding: 23px 20px 5px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     order: 2;
-    padding: 0 0 0 57px;
+    padding: 0 60px 0 57px;
     box-shadow: none;
 
     & .form__title {
@@ -16,7 +17,8 @@
       margin-bottom: 55px;
 
       @media (min-width: @tablet-width) {
-        margin-bottom: 60px;
+        margin-bottom: 57px;
+        text-align: start;
       }
     }
   }
@@ -180,6 +182,7 @@
     & .form__title {
       margin-right: auto;
       margin-bottom: 72px;
+      text-align: start;
     }
 
     &::before {
